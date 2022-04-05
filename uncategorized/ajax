@@ -1,26 +1,13 @@
 <!DOCTYPE html>
-<html lang="cn">
+<html>
 <head>
-  <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width">
-<meta name="theme-color" content="#222"><meta name="generator" content="Hexo 5.4.1">
+  <meta charset="utf-8">
+  
 
-
-  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
-  <link rel="mask-icon" href="/images/logo.svg" color="#222">
-
-<link rel="stylesheet" href="/css/main.css">
-
-
-
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/all.min.css" integrity="sha256-DfWjNxDkM94fVBWx1H5BMMp0Zq7luBlV8QRcSES7s+0=" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
-
-<script class="next-config" data-name="main" type="application/json">{"hostname":"shylees.github.io","root":"/","images":"/images","scheme":"Muse","darkmode":false,"version":"8.11.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"}}</script><script src="/js/config.js"></script>
-
-    <meta name="description" content="ajax 尚硅谷(from 21.9.9 -9.10)1.简介1.1 ajaxajax(asynchronous javascript and xml)，即异步 JS 和 XML 通过 ajax 可以在浏览器中向服务器发送异步请求，最大的优势 –&gt; 无刷新获取数据 ajax 是一种将现有标准组合在一起使用的新方式 1.2 xmlxml 可扩展标记语言 被设计用来传输和存储数据 与 html">
+  
+  <title>ajax 尚硅谷 | shylees&#39; Blog</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="ajax 尚硅谷(from 21.9.9 -9.10)1.简介1.1 ajaxajax(asynchronous javascript and xml)，即异步 JS 和 XML 通过 ajax 可以在浏览器中向服务器发送异步请求，最大的优势 –&gt; 无刷新获取数据 ajax 是一种将现有标准组合在一起使用的新方式 1.2 xmlxml 可扩展标记语言 被设计用来传输和存储数据 与 html">
 <meta property="og:type" content="article">
 <meta property="og:title" content="ajax 尚硅谷">
 <meta property="og:url" content="https://shylees.github.io/uncategorized/ajax">
@@ -35,190 +22,76 @@
 <meta property="article:tag" content="js">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://shylees.github.io/uncategorized/视频截图/36cors.jpg">
-
-
-<link rel="canonical" href="https://shylees.github.io/uncategorized/ajax">
-
-
-
-<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"cn","comments":true,"permalink":"https://shylees.github.io/uncategorized/ajax","path":"uncategorized/ajax","title":"ajax 尚硅谷"}</script>
-
-<script class="next-config" data-name="calendar" type="application/json">""</script>
-<title>ajax 尚硅谷 | shylees' Blog</title>
   
+    <link rel="alternate" href="/atom.xml" title="shylees&#39; Blog" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  
+<link rel="stylesheet" href="/css/style.css">
 
+<meta name="generator" content="Hexo 5.4.1"></head>
 
-
-
-
-  <noscript>
-    <link rel="stylesheet" href="/css/noscript.css">
-  </noscript>
-</head>
-
-<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
-  <div class="headband"></div>
-
-  <main class="main">
-    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
-      <div class="header-inner"><div class="site-brand-container">
-  <div class="site-nav-toggle">
-    <div class="toggle" aria-label="Toggle navigation bar" role="button">
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">shylees&#39; Blog</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://shylees.github.io"></form>
+      </div>
     </div>
   </div>
-
-  <div class="site-meta">
-
-    <a href="/" class="brand" rel="start">
-      <i class="logo-line"></i>
-      <p class="site-title">shylees' Blog</p>
-      <i class="logo-line"></i>
-    </a>
-      <p class="site-subtitle" itemprop="description">低头往前走就好了</p>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-ajax" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/uncategorized/ajax" class="article-date">
+  <time datetime="2021-09-08T16:00:00.000Z" itemprop="datePublished">2021-09-09</time>
+</a>
+    
   </div>
-
-  <div class="site-nav-right">
-    <div class="toggle popup-trigger">
-    </div>
-  </div>
-</div>
-
-
-
-
-
-
-
-</div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
         
   
-  <div class="toggle sidebar-toggle" role="button">
-    <span class="toggle-line"></span>
-    <span class="toggle-line"></span>
-    <span class="toggle-line"></span>
-  </div>
-
-  <aside class="sidebar">
-
-    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
-      <ul class="sidebar-nav">
-        <li class="sidebar-nav-toc">
-          Table of Contents
-        </li>
-        <li class="sidebar-nav-overview">
-          Overview
-        </li>
-      </ul>
-
-      <div class="sidebar-panel-container">
-        <!--noindex-->
-        <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#ajax-%E5%B0%9A%E7%A1%85%E8%B0%B7-from-21-9-9-9-10"><span class="nav-number">1.</span> <span class="nav-text">ajax 尚硅谷(from 21.9.9 -9.10)</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-%E7%AE%80%E4%BB%8B"><span class="nav-number">1.1.</span> <span class="nav-text">1.简介</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-1-ajax"><span class="nav-number">1.1.1.</span> <span class="nav-text">1.1 ajax</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-2-xml"><span class="nav-number">1.1.2.</span> <span class="nav-text">1.2 xml</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-3-json"><span class="nav-number">1.1.3.</span> <span class="nav-text">1.3 json</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-4-ajax-%E7%9A%84%E7%89%B9%E7%82%B9"><span class="nav-number">1.1.4.</span> <span class="nav-text">1.4 ajax 的特点</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-4-1-%E4%BC%98%E7%82%B9"><span class="nav-number">1.1.4.1.</span> <span class="nav-text">1.4.1 优点</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#1-4-2-%E7%BC%BA%E7%82%B9"><span class="nav-number">1.1.4.2.</span> <span class="nav-text">1.4.2 缺点</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-http-%E6%8A%A5%E6%96%87"><span class="nav-number">1.2.</span> <span class="nav-text">2. http 报文</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#2-1-http"><span class="nav-number">1.2.1.</span> <span class="nav-text">2.1 http</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-2-%E8%AF%B7%E6%B1%82%E6%8A%A5%E6%96%87"><span class="nav-number">1.2.2.</span> <span class="nav-text">2.2 请求报文</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-3-%E5%93%8D%E5%BA%94%E6%8A%A5%E6%96%87"><span class="nav-number">1.2.3.</span> <span class="nav-text">2.3 响应报文</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-4-network-%E4%B8%8A%E7%9A%84%E8%AF%B7%E6%B1%82%E5%93%8D%E5%BA%94"><span class="nav-number">1.2.4.</span> <span class="nav-text">2.4 network 上的请求响应</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-ajax%E7%9A%84%E4%BD%BF%E7%94%A8"><span class="nav-number">1.3.</span> <span class="nav-text">3. ajax的使用</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#3-1-node-express-%E7%9A%84%E4%BD%BF%E7%94%A8"><span class="nav-number">1.3.1.</span> <span class="nav-text">3.1 node express 的使用</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-2-%E5%8E%9F%E7%94%9Fajax%E4%BD%BF%E7%94%A8"><span class="nav-number">1.3.2.</span> <span class="nav-text">3.2 原生ajax使用</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#3-2-1-%E5%8E%9F%E7%94%9Fajax%E6%A1%88%E4%BE%8B-%E2%80%93-%E7%82%B9%E5%87%BB%E6%8C%89%E9%92%AE-%E5%B0%86%E5%93%8D%E5%BA%94%E7%9A%84%E6%95%B0%E6%8D%AE%E6%94%BE%E5%9C%A8%E6%96%87%E6%9C%AC%E6%A1%86%E9%87%8C"><span class="nav-number">1.3.2.1.</span> <span class="nav-text">3.2.1 原生ajax案例 – 点击按钮 将响应的数据放在文本框里</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-3-jquery-%E4%B8%AD%E7%9A%84-ajax"><span class="nav-number">1.3.3.</span> <span class="nav-text">3.3 jquery 中的 ajax</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-4-axios"><span class="nav-number">1.3.4.</span> <span class="nav-text">3.4 axios</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-5-fetch"><span class="nav-number">1.3.5.</span> <span class="nav-text">3.5 fetch</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-%E8%B7%A8%E5%9F%9F%E9%97%AE%E9%A2%98"><span class="nav-number">1.4.</span> <span class="nav-text">4. 跨域问题</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#4-1%E5%90%8C%E6%BA%90%E7%AD%96%E7%95%A5"><span class="nav-number">1.4.1.</span> <span class="nav-text">4.1同源策略</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-2-%E5%90%8C%E6%BA%90%E7%9A%84%E4%B8%80%E4%B8%AA%E4%BE%8B%E5%AD%90"><span class="nav-number">1.4.2.</span> <span class="nav-text">4.2 同源的一个例子</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-3-jsonp-%E5%8E%9F%E7%90%86"><span class="nav-number">1.4.3.</span> <span class="nav-text">4.3 jsonp 原理</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-4-jsonp-%E5%AE%9E%E8%B7%B5"><span class="nav-number">1.4.4.</span> <span class="nav-text">4.4 jsonp 实践</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-5-jq-jsonp"><span class="nav-number">1.4.5.</span> <span class="nav-text">4.5 jq-jsonp</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-6-cors"><span class="nav-number">1.4.6.</span> <span class="nav-text">4.6 cors</span></a></li></ol></li></ol></li></ol></div>
-        </div>
-        <!--/noindex-->
-
-        <div class="site-overview-wrap sidebar-panel">
-          <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
-  <p class="site-author-name" itemprop="name">shylees</p>
-  <div class="site-description" itemprop="description">前端学习笔记</div>
-</div>
-<div class="site-state-wrap site-overview-item animated">
-  <nav class="site-state">
-      <div class="site-state-item site-state-posts">
-        <a href="/archives/">
-          <span class="site-state-item-count">2</span>
-          <span class="site-state-item-name">posts</span>
-        </a>
-      </div>
-      <div class="site-state-item site-state-tags">
-        <span class="site-state-item-count">2</span>
-        <span class="site-state-item-name">tags</span>
-      </div>
-  </nav>
-</div>
-
-
-
-        </div>
-      </div>
-    </div>
-  </aside>
-  <div class="sidebar-dimmer"></div>
-
-
-    </header>
-
-    
-  <div class="back-to-top" role="button" aria-label="Back to top">
-    <i class="fa fa-arrow-up"></i>
-    <span>0%</span>
-  </div>
-
-<noscript>
-  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
-</noscript>
-
-
-    <div class="main-inner post posts-expand">
-
-
+    <h1 class="article-title" itemprop="name">
+      ajax 尚硅谷
+    </h1>
   
 
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="cn">
-    <link itemprop="mainEntityOfPage" href="https://shylees.github.io/uncategorized/ajax">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="shylees">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="shylees' Blog">
-      <meta itemprop="description" content="前端学习笔记">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="ajax 尚硅谷 | shylees' Blog">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-          ajax 尚硅谷
-        </h1>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">Posted on</span>
-
-      <time title="Created: 2021-09-09 00:00:00" itemprop="dateCreated datePublished" datetime="2021-09-09T00:00:00+08:00">2021-09-09</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2021-09-10 00:00:00" itemprop="dateModified" datetime="2021-09-10T00:00:00+08:00">2021-09-10</time>
-    </span>
-
-  
-</div>
-
-        </div>
       </header>
-
     
-    
-    
-    <div class="post-body" itemprop="articleBody">
+    <div class="article-entry" itemprop="articleBody">
+      
         <h1 id="ajax-尚硅谷-from-21-9-9-9-10"><a href="#ajax-尚硅谷-from-21-9-9-9-10" class="headerlink" title="ajax 尚硅谷(from 21.9.9 -9.10)"></a>ajax 尚硅谷(from 21.9.9 -9.10)</h1><h2 id="1-简介"><a href="#1-简介" class="headerlink" title="1.简介"></a>1.简介</h2><h3 id="1-1-ajax"><a href="#1-1-ajax" class="headerlink" title="1.1 ajax"></a>1.1 ajax</h3><p>ajax(asynchronous javascript and xml)，即异步 JS 和 XML</p>
 <p>通过 ajax 可以在浏览器中向服务器发送异步请求，最大的优势 –&gt; 无刷新获取数据</p>
 <p>ajax 是一种将现有标准组合在一起使用的新方式</p>
@@ -390,74 +263,129 @@
 <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="language-javascript"></span></span><br><span class="line"><span class="language-javascript">  <span class="keyword">const</span> btn = <span class="variable language_">document</span>.<span class="title function_">querySelector</span>(<span class="string">&#x27;button&#x27;</span>)</span></span><br><span class="line"><span class="language-javascript">  <span class="keyword">const</span> text = <span class="variable language_">document</span>.<span class="title function_">querySelector</span>(<span class="string">&#x27;textarea&#x27;</span>)</span></span><br><span class="line"><span class="language-javascript"></span></span><br><span class="line"><span class="language-javascript">  btn.<span class="property">onclick</span> = <span class="keyword">function</span> (<span class="params"></span>) &#123;</span></span><br><span class="line"><span class="language-javascript">    <span class="keyword">const</span> xhr = <span class="keyword">new</span> <span class="title class_">XMLHttpRequest</span>();</span></span><br><span class="line"><span class="language-javascript">    xhr.<span class="title function_">open</span>(<span class="string">&#x27;GET&#x27;</span>, <span class="string">&#x27;http://127.0.0.1:8000/cors&#x27;</span>);</span></span><br><span class="line"><span class="language-javascript">    xhr.<span class="title function_">send</span>();</span></span><br><span class="line"><span class="language-javascript">    xhr.<span class="property">onreadystatechange</span> = <span class="keyword">function</span> (<span class="params"></span>) &#123;</span></span><br><span class="line"><span class="language-javascript">      <span class="keyword">if</span> (xhr.<span class="property">readyState</span> === <span class="number">4</span>) &#123;</span></span><br><span class="line"><span class="language-javascript">        text.<span class="property">value</span> = xhr.<span class="property">response</span></span></span><br><span class="line"><span class="language-javascript">      &#125;</span></span><br><span class="line"><span class="language-javascript">    &#125;</span></span><br><span class="line"><span class="language-javascript">  &#125;</span></span><br><span class="line"><span class="language-javascript"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
 
 
+      
     </div>
+    <footer class="article-footer">
+      <a data-url="https://shylees.github.io/uncategorized/ajax" data-id="cl1m5p1ob000098g2azj7e5y4" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ajax/" rel="tag">ajax</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/js/" rel="tag">js</a></li></ul>
 
-    
-    
-    
-
-    <footer class="post-footer">
-          <div class="post-tags">
-              <a href="/tags/ajax/" rel="tag"># ajax</a>
-              <a href="/tags/js/" rel="tag"># js</a>
-          </div>
-
-        
-
-          <div class="post-nav">
-            <div class="post-nav-item">
-            </div>
-            <div class="post-nav-item">
-                <a href="/uncategorized/hello-world" rel="next" title="Hello World">
-                  Hello World <i class="fa fa-chevron-right"></i>
-                </a>
-            </div>
-          </div>
     </footer>
-  </article>
-</div>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/uncategorized/hello-world" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          Hello World
+        
+      </div>
+    </a>
+  
+  
+</nav>
 
+  
+</article>
 
+</section>
+        
+          <aside id="sidebar">
+  
+    
 
-
-
-
-</div>
-  </main>
-
-  <footer class="footer">
-    <div class="footer-inner">
-
-
-<div class="copyright">
-  &copy; 
-  <span itemprop="copyrightYear">2022</span>
-  <span class="with-love">
-    <i class="fa fa-heart"></i>
-  </span>
-  <span class="author" itemprop="copyrightHolder">shylees</span>
-</div>
-  <div class="powered-by">Powered by <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/muse/" rel="noopener" target="_blank">NexT.Muse</a>
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/ajax/" rel="tag">ajax</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/js/" rel="tag">js</a></li></ul>
+    </div>
   </div>
 
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/ajax/" style="font-size: 10px;">ajax</a> <a href="/tags/js/" style="font-size: 10px;">js</a>
     </div>
-  </footer>
+  </div>
 
   
-  <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
-<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/schemes/muse.js"></script><script src="/js/next-boot.js"></script>
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/04/">April 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/09/">September 2021</a></li></ul>
+    </div>
+  </div>
+
 
   
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/uncategorized/hello-world">Hello World</a>
+          </li>
+        
+          <li>
+            <a href="/uncategorized/ajax">ajax 尚硅谷</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
 
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2022 shylees<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
 
-
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
 
 
   
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+  
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
 
 
 
 
+<script src="/js/script.js"></script>
 
+
+
+
+  </div>
 </body>
 </html>
