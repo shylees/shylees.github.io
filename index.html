@@ -1,425 +1,438 @@
 <!DOCTYPE html>
-<html>
+<html lang="cn">
 <head>
-  <meta charset="utf-8">
-  
+    <meta charset="UTF-8">
+    <meta http-equiv="Cache-Control" content="no-siteapp">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+    
+    <meta name="referrer" content="no-referrer-when-downgrade">
+    
+    <meta name="renderer" content="webkit"/>
+    <meta name="force-rendering" content="webkit"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <script>if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMode)) window.location.href="https://support.dmeng.net/upgrade-your-browser.html?referrer="+encodeURIComponent(window.location.href); </script>
+    
+    
+        <link rel="preload" crossorigin="crossorigin" href="/fonts/roboto/Roboto-Regular.woff2" as="font">
+        <link rel="preload" crossorigin="crossorigin" href="/fonts/roboto/Roboto-Bold.woff2" as="font">
+    
+    
+    
+        <link rel="shortcut icon" href="/icons/favicon.ico">
+    
 
-  
-  <title>shylees&#39; Blog</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="前端学习笔记">
-<meta property="og:type" content="website">
-<meta property="og:title" content="shylees&#39; Blog">
-<meta property="og:url" content="https://shylees.github.io/index.html">
-<meta property="og:site_name" content="shylees&#39; Blog">
-<meta property="og:description" content="前端学习笔记">
-<meta property="og:locale">
-<meta property="article:author" content="shylees">
-<meta property="article:tag" content="html,css,htm5,css3,js,JavaScript,vue,vue2.0,vue3.0">
-<meta name="twitter:card" content="summary">
-  
-    <link rel="alternate" href="/atom.xml" title="shylees&#39; Blog" type="application/atom+xml">
-  
-  
-    <link rel="icon" href="/favicon.png">
-  
-  
-    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
-  
-  
-<link rel="stylesheet" href="/css/style.css">
+    
+    
+        
+<link rel="stylesheet" href="/css/mdui.min.v1.0.0.css">
 
+    
+    
+<link rel="stylesheet" href="/css/main.css">
+<link rel="stylesheet" href="/css/iconfont.css">
+
+
+    
+    
+
+    
+        <script data-ad-client="ca-" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    
+
+
+
+
+
+
+
+
+
+
+
+
+    
+        <script>
+  if (typeof MathJax === 'undefined') {
+    window.MathJax = {
+      loader: {
+        
+            load: ['[tex]/mhchem'],
+        
+        source: {
+          '[tex]/amsCd': '[tex]/amscd',
+          '[tex]/AMScd': '[tex]/amscd'
+        }
+      },
+      tex: {
+        inlineMath: {'[+]': [['$', '$']]},
+        
+            packages: {'[+]': ['mhchem']},
+        
+        tags: 'ams'
+      },
+      options: {
+        renderActions: {
+          findScript: [10, doc => {
+            document.querySelectorAll('script[type^="math/tex"]').forEach(node => {
+              const display = !!node.type.match(/; *mode=display/);
+              const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+              const text = document.createTextNode('');
+              node.parentNode.replaceChild(text, node);
+              math.start = {node: text, delim: '', n: 0};
+              math.end = {node: text, delim: '', n: 0};
+              doc.math.push(math);
+            });
+          }, '', false],
+          insertedScript: [200, () => {
+            document.querySelectorAll('mjx-container').forEach(node => {
+              let target = node.parentNode;
+              if (target.nodeName.toLowerCase() === 'li') {
+                target.parentNode.classList.add('has-jax');
+              }
+            });
+          }, '', false]
+        }
+      }
+    };
+    (function () {
+      var script = document.createElement('script');
+      script.src = 'https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js';
+      script.defer = true;
+      document.head.appendChild(script);
+    })();
+  } else {
+    MathJax.startup.document.state(0);
+    MathJax.texReset();
+    MathJax.typeset();
+  }
+</script>
+          
+
+
+    
+    
+    <title>
+          
+            shylees&#39; Blog
+        
+    </title>
+    
+    
 <meta name="generator" content="Hexo 5.4.1"></head>
-
-<body>
-  <div id="container">
-    <div id="wrap">
-      <header id="header">
-  <div id="banner"></div>
-  <div id="header-outer" class="outer">
-    <div id="header-title" class="inner">
-      <h1 id="logo-wrap">
-        <a href="/" id="logo">shylees&#39; Blog</a>
-      </h1>
-      
-    </div>
-    <div id="header-inner" class="inner">
-      <nav id="main-nav">
-        <a id="main-nav-toggle" class="nav-icon"></a>
-        
-          <a class="main-nav-link" href="/">Home</a>
-        
-          <a class="main-nav-link" href="/archives">Archives</a>
-        
-      </nav>
-      <nav id="sub-nav">
-        
-          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
-        
-        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
-      </nav>
-      <div id="search-form-wrap">
-        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://shylees.github.io"></form>
-      </div>
-    </div>
+<body class="mdui-drawer-body-left mdui-appbar-with-toolbar mdui-theme-primary-teal mdui-theme-accent-blue">
+  
+  <header class="mdui-appbar mdui-appbar-fixed">
+  <div id="toolbar" class="mdui-toolbar mdui-color-theme">
+    <button class="mdui-btn mdui-btn-icon" mdui-drawer="{target: '#sidebar', swipe: true}"><i class="iconfont icon-menu"></i></button>
+    <a href="/" class="mdui-typo-headline">shylees&#39; Blog</a>
+    <a href="/" class="header-subtitle mdui-typo-headline">低头往前走就好了</a>
+    <div class="mdui-toolbar-spacer"></div>
+    <button class="mdui-btn mdui-btn-icon" mdui-dialog="{target: '#search'}" mdui-tooltip="{content: 'search'}"><i class="iconfont icon-search"></i></button>
   </div>
 </header>
-      <div class="outer">
-        <section id="main">
+
+<div class="mdui-dialog" id="search">
   
-    <article id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/uncategorized/hello-world" class="article-date">
-  <time datetime="2022-04-04T08:06:02.852Z" itemprop="datePublished">2022-04-04</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/uncategorized/hello-world">Hello World</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-
-      
+    <div class="search-form">
+      <input type="search" class="search-form-input" placeholder="请输入关键字" onfocus="listenSearchFunc()">
     </div>
-    <footer class="article-footer">
-      <a data-url="https://shylees.github.io/uncategorized/hello-world" data-id="cl1m5p1on000598g25asmep7b" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
+    <div class="search-result" data-resource="/search.xml"></div>
   
-</article>
+</div>
 
-
-  
-    <article id="post-ajax" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/uncategorized/ajax" class="article-date">
-  <time datetime="2021-09-08T16:00:00.000Z" itemprop="datePublished">2021-09-09</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/uncategorized/ajax">ajax 尚硅谷</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="ajax-尚硅谷-from-21-9-9-9-10"><a href="#ajax-尚硅谷-from-21-9-9-9-10" class="headerlink" title="ajax 尚硅谷(from 21.9.9 -9.10)"></a>ajax 尚硅谷(from 21.9.9 -9.10)</h1><h2 id="1-简介"><a href="#1-简介" class="headerlink" title="1.简介"></a>1.简介</h2><h3 id="1-1-ajax"><a href="#1-1-ajax" class="headerlink" title="1.1 ajax"></a>1.1 ajax</h3><p>ajax(asynchronous javascript and xml)，即异步 JS 和 XML</p>
-<p>通过 ajax 可以在浏览器中向服务器发送异步请求，最大的优势 –&gt; 无刷新获取数据</p>
-<p>ajax 是一种将现有标准组合在一起使用的新方式</p>
-<h3 id="1-2-xml"><a href="#1-2-xml" class="headerlink" title="1.2 xml"></a>1.2 xml</h3><p>xml 可扩展标记语言</p>
-<p>被设计用来传输和存储数据</p>
-<p>与 html 类似，不同的是 html 中都是预定义标签，而 xml 没有预定于标签，全部是自定义标签，用了表示一些数据</p>
-<h3 id="1-3-json"><a href="#1-3-json" class="headerlink" title="1.3 json"></a>1.3 json</h3><p>现在 xml 已经的传输和存储数据的功能已经被 json 取代了</p>
-<h3 id="1-4-ajax-的特点"><a href="#1-4-ajax-的特点" class="headerlink" title="1.4 ajax 的特点"></a>1.4 ajax 的特点</h3><h4 id="1-4-1-优点"><a href="#1-4-1-优点" class="headerlink" title="1.4.1 优点"></a>1.4.1 优点</h4><ol>
-<li>可以无需刷新页面与服务端进行通信</li>
-<li>允许根据用户事件来更新部分页面内容</li>
-</ol>
-<h4 id="1-4-2-缺点"><a href="#1-4-2-缺点" class="headerlink" title="1.4.2 缺点"></a>1.4.2 缺点</h4><ol>
-<li>没有浏览历史，不能回退</li>
-<li>存在跨域问题（同源）</li>
-<li>seo（爬虫） 不友好</li>
-</ol>
-<h2 id="2-http-报文"><a href="#2-http-报文" class="headerlink" title="2. http 报文"></a>2. http 报文</h2><h3 id="2-1-http"><a href="#2-1-http" class="headerlink" title="2.1 http"></a>2.1 http</h3><p>hypertext transport protocol 超文本传输协议，详细规定了浏览器和万维网服务器之间互相通信的规则</p>
-<h3 id="2-2-请求报文"><a href="#2-2-请求报文" class="headerlink" title="2.2 请求报文"></a>2.2 请求报文</h3><blockquote>
-<p>重点：格式、参数</p>
-</blockquote>
-<ul>
-<li><p>行   : POST    /s?ie=utf-8   HTTP/1.1</p>
-</li>
-<li><p>头   : Host: …</p>
-<p>​         Cookie: name=…</p>
-<p>​         Content-type:application/x-www-form-urlencoded</p>
-<p>​         User-Agent:chrome 83</p>
-</li>
-<li><p>空行 :</p>
-</li>
-<li><p>体    : username=admin&amp;password=admin</p>
-</li>
-</ul>
-<h3 id="2-3-响应报文"><a href="#2-3-响应报文" class="headerlink" title="2.3 响应报文"></a>2.3 响应报文</h3><ul>
-<li><p>行   : HTTP/1.1  200  OK</p>
-</li>
-<li><p>头   : Content-type: text/html;charset=utf-8</p>
-<p>​         Content-length:2048</p>
-<p>​         Content-encoding:gzip</p>
-</li>
-<li><p>空行 :</p>
-</li>
-<li><p>体    : <code>&lt;html&gt;....&lt;/html&gt;</code></p>
-</li>
-</ul>
-<h3 id="2-4-network-上的请求响应"><a href="#2-4-network-上的请求响应" class="headerlink" title="2.4 network 上的请求响应"></a>2.4 network 上的请求响应</h3><ul>
-<li>Headers：请求内容<ul>
-<li>General</li>
-<li>Response Headers：响应头和行</li>
-<li>Requset Headers：请求头和行</li>
-<li>Query String Parameters：请求体<ul>
-<li>get ： 查询字符串的键值对</li>
-<li>post：查询字符串</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>Preview：预览响应过来的html</li>
-<li>Response：响应的内容</li>
-</ul>
-<h2 id="3-ajax的使用"><a href="#3-ajax的使用" class="headerlink" title="3. ajax的使用"></a>3. ajax的使用</h2><h3 id="3-1-node-express-的使用"><a href="#3-1-node-express-的使用" class="headerlink" title="3.1 node express 的使用"></a>3.1 node express 的使用</h3><p>使用node express搭建服务器</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> express <span class="keyword">from</span> <span class="string">&#x27;express&#x27;</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> app = <span class="title function_">express</span>();</span><br><span class="line"></span><br><span class="line">app.<span class="title function_">get</span>(<span class="string">&#x27;/&#x27;</span>, <span class="function">(<span class="params">request, response</span>) =&gt;</span> &#123;</span><br><span class="line">  response.<span class="title function_">send</span>(<span class="string">&#x27;hello express&#x27;</span>);</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line">app.<span class="title function_">listen</span>(<span class="number">8000</span>, <span class="function">() =&gt;</span> &#123;</span><br><span class="line">  <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;8000端口监听...&quot;</span>);</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
-
-
-
-<h3 id="3-2-原生ajax使用"><a href="#3-2-原生ajax使用" class="headerlink" title="3.2 原生ajax使用"></a>3.2 原生ajax使用</h3><ol>
-<li>创建对象  <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> xhr = <span class="keyword">new</span> <span class="title class_">XMLHttpRequest</span>();</span><br></pre></td></tr></table></figure>
-</li>
-<li>初始化 设置请求方法和url  <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">xhr.<span class="title function_">open</span>(<span class="string">&#x27;GET&#x27;</span>,<span class="string">&#x27;http://127.0.0.1:8000/server&#x27;</span>);</span><br></pre></td></tr></table></figure>
-</li>
-<li>发送 设置参数 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">xhr.<span class="title function_">send</span>();</span><br><span class="line">xhr.<span class="title function_">send</span>(<span class="string">&#x27;a=10&amp;b=20&#x27;</span>);</span><br></pre></td></tr></table></figure>
-</li>
-<li>事件绑定 处理服务端返回的结果 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">xhr.<span class="property">onreadystatechange</span> = <span class="keyword">function</span>(<span class="params"></span>)&#123;...&#125;</span><br></pre></td></tr></table></figure>
-<blockquote>
-<p>其中 readystate 是 xhr 对象的属性，<br>其值为 0:初始状态 1:open后  2:send后  3:返回部分数据 4:返回全部数据</p>
-</blockquote>
-<blockquote>
-<p>其中 xhr的对象<br>state:状态码 statusText:状态字符串 getAllResponseHeader():所有响应头 response:响应体</p>
-</blockquote>
-</li>
-</ol>
-<ul>
-<li><p>服务器端要做的操作：解决跨域问题</p>
-  <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">response.<span class="title function_">setHeader</span>(<span class="string">&#x27;Access-Control-Allow-Origin&#x27;</span>,<span class="string">&#x27;*&#x27;</span>);</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>if 设置请求头 :  在send前</p>
-   <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">xhr.<span class="title function_">setRequestHeader</span>(<span class="string">&#x27;Content-Type&#x27;</span>,<span class="string">&#x27;application/x-www-form-urlencoded&#x27;</span>)</span><br><span class="line">xhr.<span class="title function_">setRequestHeader</span>(<span class="string">&#x27;name&#x27;</span>,<span class="string">&#x27;lee&#x27;</span>)</span><br></pre></td></tr></table></figure>
-
-<p>则 要在服务器端 设置允许的响应头：</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">response.<span class="title function_">setHeader</span>(<span class="string">&#x27;Access-Control-Allow-Headers&#x27;</span>,<span class="string">&#x27;*&#x27;</span>);</span><br></pre></td></tr></table></figure></li>
-<li><p>if 处理后端传的字符串json数据</p>
-<ul>
-<li><p>服务器</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> data = &#123; name : <span class="string">&#x27;lee&#x27;</span> &#125;</span><br><span class="line"><span class="keyword">let</span> str = <span class="title class_">JSON</span>.<span class="title function_">stringify</span>(data);</span><br><span class="line">response.<span class="title function_">send</span>(str)</span><br></pre></td></tr></table></figure></li>
-<li><p>前端处理<br>  手动转换数据格式：</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> data = <span class="title class_">JSON</span>.<span class="title function_">parse</span>(xhr.<span class="property">response</span>);</span><br><span class="line">res.<span class="property">value</span> = data.<span class="property">name</span>;</span><br></pre></td></tr></table></figure>
-
-<p>  自动转换：</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//在open前 设置响应体数据的类型</span></span><br><span class="line">xhr.<span class="property">responseType</span> = <span class="string">&#x27;json&#x27;</span></span><br><span class="line"><span class="comment">//在事件里直接使用就可以了</span></span><br><span class="line">res.<span class="property">value</span> = xhr.<span class="property">response</span>.<span class="property">name</span>;</span><br></pre></td></tr></table></figure></li>
-</ul>
-</li>
-<li><p>解决ie缓存问题：在open中加时间戳 保证每次发生的请求都不一样</p>
-<pre><code>    <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">xhr.<span class="title function_">open</span>(<span class="string">&#x27;GET&#x27;</span>,<span class="string">&#x27;http://127.0.0.1:8000/ie?t=&#x27;</span> + <span class="title class_">Date</span>.<span class="title function_">now</span>());</span><br></pre></td></tr></table></figure>
-</code></pre>
-</li>
-<li><p>处理请求异常<br> 服务器可以设置一个定时器，三秒后才返回响应<br> 在open前：</p>
- <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//超时设置 </span></span><br><span class="line">xhr.<span class="property">timeout</span> = <span class="number">2000</span>;</span><br><span class="line"><span class="comment">//超时回调 </span></span><br><span class="line">xhr.<span class="property">ontimeout</span> = <span class="keyword">function</span>(<span class="params"></span>)&#123; <span class="title function_">alert</span>(<span class="string">&#x27;网络异常，请稍后重试&#x27;</span>) &#125;</span><br><span class="line"><span class="comment">//网络异常回调 可以在f12 使用offline 测试</span></span><br><span class="line">xhr.<span class="property">onerror</span> = <span class="keyword">function</span>(<span class="params"></span>)&#123; <span class="title function_">alert</span>(<span class="string">&#x27;你的网络似乎出现了问题&#x27;</span>) &#125;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>取消发送请求事件</p>
-  <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> x = <span class="literal">null</span>;</span><br><span class="line"><span class="comment">//发送请求 x 为 前面的xhr对象</span></span><br><span class="line"><span class="comment">//使用 x.abort() 可以取消发送请求</span></span><br><span class="line"><span class="comment">//利用这个方法可以处理 多次发送请求 只保留一个请求的情况</span></span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<h4 id="3-2-1-原生ajax案例-–-点击按钮-将响应的数据放在文本框里"><a href="#3-2-1-原生ajax案例-–-点击按钮-将响应的数据放在文本框里" class="headerlink" title="3.2.1 原生ajax案例 – 点击按钮 将响应的数据放在文本框里"></a>3.2.1 原生ajax案例 – 点击按钮 将响应的数据放在文本框里</h4><h3 id="3-3-jquery-中的-ajax"><a href="#3-3-jquery-中的-ajax" class="headerlink" title="3.3 jquery 中的 ajax"></a>3.3 jquery 中的 ajax</h3><ol>
-<li>get/post请求<br>  <code>$.get/post(url, data请求携带的参数, callback成功时的回调函数, type返回数据格式)  后面三个参数可选填</code>  <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$.<span class="title function_">get</span>(<span class="string">&#x27;http://127.0.0.1:8000/jq-server&#x27;</span>, &#123;<span class="attr">a</span>:<span class="number">10</span>,<span class="attr">b</span>:<span class="number">20</span>&#125;, <span class="keyword">function</span>(<span class="params">data</span>)&#123;</span><br><span class="line">      <span class="title function_">log</span>(data);</span><br><span class="line">&#125;,<span class="string">&#x27;json&#x27;</span>)</span><br></pre></td></tr></table></figure>
-</li>
-<li>ajax通用请求  <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"> $.<span class="title function_">ajax</span>(&#123;</span><br><span class="line">      <span class="attr">url</span>:<span class="string">&#x27;http://127.0.0.1:8000/delay&#x27;</span>,   <span class="comment">//url</span></span><br><span class="line">      <span class="attr">data</span>: &#123;<span class="attr">a</span>:<span class="number">10</span>,<span class="attr">b</span>:<span class="number">20</span>&#125;,       <span class="comment">//参数</span></span><br><span class="line">      <span class="attr">type</span>: <span class="string">&#x27;GET&#x27;</span>,             <span class="comment">//请求类型</span></span><br><span class="line">      <span class="attr">dataType</span>:<span class="string">&#x27;json&#x27;</span>,         <span class="comment">//响应体结果</span></span><br><span class="line">      <span class="attr">success</span>:<span class="keyword">function</span>(<span class="params">data</span>)&#123;  <span class="comment">//成功回调</span></span><br><span class="line">           <span class="title function_">log</span>(data);</span><br><span class="line">      &#125;,</span><br><span class="line">      <span class="attr">timeout</span>:<span class="number">2000</span>,            <span class="comment">//超时回调</span></span><br><span class="line">      <span class="attr">error</span>:<span class="keyword">function</span>(<span class="params"></span>)&#123;...&#125;    <span class="comment">//失败回调</span></span><br><span class="line">     <span class="attr">headers</span>:&#123;...&#125;            <span class="comment">//自定义头部</span></span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
-</li>
-</ol>
-<h3 id="3-4-axios"><a href="#3-4-axios" class="headerlink" title="3.4 axios"></a>3.4 axios</h3><ol>
-<li><p>导入axios加载文件 bootcdn</p>
-</li>
-<li><p>axios可以配置 baseURL</p>
- <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">axios.<span class="property">defaults</span>.<span class="property">baseURL</span> = <span class="string">&#x27;http://127.0.0.1:8000&#x27;</span>;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>axios使用 返回promise对象<br> get请求: axios.get(url [, config] )<br> post请求: axios.post(url [, data [, config]] ) //第二个是请求体参数<br> axios请求: axios(config)</p>
- <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"> axios.<span class="title function_">get</span>(<span class="string">&#x27;/axios-server&#x27;</span>,&#123;</span><br><span class="line">       <span class="attr">params</span>:&#123;          <span class="comment">//url参数</span></span><br><span class="line">            <span class="attr">id</span>:<span class="number">100</span>,</span><br><span class="line">            <span class="attr">vip</span>:<span class="number">7</span></span><br><span class="line">       &#125;,</span><br><span class="line">       <span class="attr">headers</span>:&#123;         <span class="comment">//请求头信息</span></span><br><span class="line">            <span class="attr">name</span>:<span class="string">&#x27;lee&#x27;</span>,</span><br><span class="line">            <span class="attr">age</span>:<span class="string">&#x27;20&#x27;</span></span><br><span class="line">       &#125;</span><br><span class="line">&#125;).<span class="title function_">then</span>(<span class="function"><span class="params">value</span> =&gt;</span> &#123; ... &#125; )</span><br></pre></td></tr></table></figure>
- <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"> axios.<span class="title function_">post</span>(<span class="string">&#x27;/axios-server&#x27;</span>,&#123; <span class="attr">username</span>:<span class="string">&#x27;admin&#x27;</span>, <span class="attr">password</span>:<span class="string">&#x27;admin&#x27;</span> &#125;,&#123;</span><br><span class="line">       <span class="attr">params</span>:&#123;          <span class="comment">//url参数</span></span><br><span class="line">            <span class="attr">id</span>:<span class="number">100</span>,</span><br><span class="line">            <span class="attr">vip</span>:<span class="number">7</span></span><br><span class="line">       &#125;,</span><br><span class="line">       <span class="attr">headers</span>:&#123;         <span class="comment">//请求头信息</span></span><br><span class="line">            <span class="attr">name</span>:<span class="string">&#x27;lee&#x27;</span>,</span><br><span class="line">            <span class="attr">age</span>:<span class="string">&#x27;20&#x27;</span></span><br><span class="line">       &#125;</span><br><span class="line">&#125;).<span class="title function_">then</span>(<span class="function"><span class="params">value</span> =&gt;</span> &#123; ... &#125; )</span><br></pre></td></tr></table></figure>
- <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="title function_">axios</span>(&#123;</span><br><span class="line">    <span class="attr">method</span>:<span class="string">&#x27;POST&#x27;</span>,              <span class="comment">//请求方法</span></span><br><span class="line">    <span class="attr">url</span>:<span class="string">&#x27;/axios-server&#x27;</span>,        <span class="comment">//url</span></span><br><span class="line">    <span class="attr">params</span>:&#123;<span class="attr">id</span>:<span class="number">100</span>, <span class="attr">vip</span>:<span class="number">7</span> &#125;,    <span class="comment">//url参数</span></span><br><span class="line">    <span class="attr">headers</span>:&#123; a=<span class="number">10</span>, b=<span class="number">20</span> &#125;,     <span class="comment">//头信息</span></span><br><span class="line">    <span class="attr">data</span>:&#123; <span class="attr">username</span>:<span class="string">&#x27;admin&#x27;</span>, <span class="attr">password</span>:<span class="string">&#x27;admin&#x27;</span> &#125;,  <span class="comment">//请求体参数</span></span><br><span class="line">&#125;).<span class="title function_">then</span>( <span class="function"><span class="params">res</span> =&gt;</span> &#123; <span class="title function_">log</span>(res) &#125; )</span><br></pre></td></tr></table></figure></li>
-</ol>
-<h3 id="3-5-fetch"><a href="#3-5-fetch" class="headerlink" title="3.5 fetch"></a>3.5 fetch</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="title function_">fetch</span>(<span class="string">&#x27;http://127.0.0.1:8000/fecth-server?vip=10&#x27;</span>,&#123;</span><br><span class="line">    <span class="attr">method</span>:<span class="string">&#x27;POST&#x27;</span>,                          <span class="comment">//请求方法</span></span><br><span class="line">    <span class="attr">headers</span>:&#123; <span class="attr">name</span>:<span class="string">&#x27;lee&#x27;</span> &#125;,                 <span class="comment">//请求头</span></span><br><span class="line">    <span class="attr">body</span>:<span class="string">&#x27;username=admin&amp;password=admin&#x27;</span>    <span class="comment">//请求体</span></span><br><span class="line">&#125;).<span class="title function_">then</span>(<span class="function"><span class="params">res</span> =&gt;</span> &#123;</span><br><span class="line">    <span class="keyword">return</span> res.<span class="title function_">text</span>();  <span class="comment">//字符串</span></span><br><span class="line">    <span class="keyword">return</span> res.<span class="title function_">json</span>();  <span class="comment">//json</span></span><br><span class="line">&#125;).<span class="title function_">then</span>(<span class="function"><span class="params">res</span> =&gt;</span> &#123;</span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(res)</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
-
-
-
-<h2 id="4-跨域问题"><a href="#4-跨域问题" class="headerlink" title="4. 跨域问题"></a>4. 跨域问题</h2><h3 id="4-1同源策略"><a href="#4-1同源策略" class="headerlink" title="4.1同源策略"></a>4.1同源策略</h3><p>浏览器的一种安全策略</p>
-<p>同源：协议、域名、端口号完全相同</p>
-<p>违背同源策略就是跨域</p>
-<h3 id="4-2-同源的一个例子"><a href="#4-2-同源的一个例子" class="headerlink" title="4.2 同源的一个例子"></a>4.2 同源的一个例子</h3><p>html页面跟 发送请求时同一个地址</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//server.js</span></span><br><span class="line">...</span><br><span class="line">app.<span class="title function_">get</span>(<span class="string">&#x27;/home&#x27;</span>,<span class="function">(<span class="params">req,res</span>) =&gt;</span> &#123;</span><br><span class="line">    res.<span class="title function_">sendFile</span>(__dirname + <span class="string">&#x27;/index.html&#x27;</span>);  <span class="comment">//响应一个页面</span></span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line">app.<span class="title function_">get</span>(<span class="string">&#x27;/data&#x27;</span>,<span class="function">(<span class="params">req,res</span>) =&gt;</span> &#123;</span><br><span class="line">    res.<span class="title function_">send</span>(<span class="string">&#x27;用户数据&#x27;</span>);   <span class="comment">//请求数据</span></span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//index.html</span></span><br><span class="line">...</span><br><span class="line">btn.<span class="property">onlick</span> = <span class="keyword">function</span>(<span class="params"></span>)&#123;</span><br><span class="line">    <span class="keyword">const</span> xhr = <span class="keyword">new</span> <span class="title class_">XMLHttpRequest</span>();</span><br><span class="line">    <span class="comment">// 因为是同源的 所以url 可以简写</span></span><br><span class="line">    xhr.<span class="title function_">open</span>(<span class="string">&#x27;GET&#x27;</span>,<span class="string">&#x27;/data&#x27;</span>);</span><br><span class="line">    xhr.<span class="title function_">send</span>();</span><br><span class="line">    xhr.<span class="property">onreadystatechange</span> = <span class="keyword">function</span>(<span class="params"></span>)&#123;</span><br><span class="line">        ...</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-
-
-<h3 id="4-3-jsonp-原理"><a href="#4-3-jsonp-原理" class="headerlink" title="4.3 jsonp 原理"></a>4.3 jsonp 原理</h3><p>主要就是利用了 <code>script</code> 标签的<code>src</code>没有跨域限制来完成的</p>
-<p>缺点：</p>
-<ul>
-<li>只能进行<code>GET</code>请求</li>
-</ul>
-<p>优点：</p>
-<ul>
-<li>兼容性好，在一些古老的浏览器中都可以运行</li>
-</ul>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//server.js</span></span><br><span class="line">app.<span class="title function_">all</span>(<span class="string">&#x27;/jsonp&#x27;</span>, <span class="function">(<span class="params">req, res</span>) =&gt;</span> &#123;</span><br><span class="line">  <span class="comment">// res.send(&#x27;console.log(hello jsonp)&#x27;)</span></span><br><span class="line">  <span class="keyword">const</span> data = &#123;</span><br><span class="line">    <span class="attr">name</span>: <span class="string">&#x27;lee&#x27;</span></span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  res.<span class="title function_">end</span>(<span class="string">`handle(<span class="subst">$&#123;<span class="built_in">JSON</span>.stringify(data)&#125;</span>)`</span>);</span><br><span class="line"></span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">//html</span><br><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="language-javascript"></span></span><br><span class="line"><span class="language-javascript">    <span class="keyword">function</span> <span class="title function_">handle</span>(<span class="params">data</span>) &#123;</span></span><br><span class="line"><span class="language-javascript">      <span class="keyword">const</span> res = <span class="variable language_">document</span>.<span class="title function_">querySelector</span>(<span class="string">&#x27;div&#x27;</span>);</span></span><br><span class="line"><span class="language-javascript">      res.<span class="property">innerHTML</span> = data.<span class="property">name</span>;</span></span><br><span class="line"><span class="language-javascript">    &#125;</span></span><br><span class="line"><span class="language-javascript"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">&quot;http://127.0.0.1:8000/jsonp&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-
-
-<h3 id="4-4-jsonp-实践"><a href="#4-4-jsonp-实践" class="headerlink" title="4.4 jsonp 实践"></a>4.4 jsonp 实践</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//server</span></span><br><span class="line">app.<span class="title function_">all</span>(<span class="string">&#x27;/jsonp-exe&#x27;</span>, <span class="function">(<span class="params">req, res</span>) =&gt;</span> &#123;</span><br><span class="line">  <span class="comment">// res.send(&#x27;console.log(hello jsonp)&#x27;)</span></span><br><span class="line">  <span class="keyword">const</span> data = &#123;</span><br><span class="line">    <span class="attr">exist</span>: <span class="number">1</span>,</span><br><span class="line">    <span class="attr">mes</span>: <span class="string">&#x27;用户名存在&#x27;</span></span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  res.<span class="title function_">end</span>(<span class="string">`handle(<span class="subst">$&#123;<span class="built_in">JSON</span>.stringify(data)&#125;</span>)`</span>);</span><br><span class="line"></span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="language-javascript"></span></span><br><span class="line"><span class="language-javascript">  <span class="keyword">const</span> p = <span class="variable language_">document</span>.<span class="title function_">querySelector</span>(<span class="string">&#x27;p&#x27;</span>)</span></span><br><span class="line"><span class="language-javascript">  <span class="keyword">const</span> input = <span class="variable language_">document</span>.<span class="title function_">querySelector</span>(<span class="string">&#x27;input&#x27;</span>)</span></span><br><span class="line"><span class="language-javascript">  <span class="keyword">function</span> <span class="title function_">handle</span>(<span class="params">data</span>) &#123;</span></span><br><span class="line"><span class="language-javascript">    input.<span class="property">style</span>.<span class="property">border</span> = <span class="string">&#x27;1px solid red&#x27;</span>;</span></span><br><span class="line"><span class="language-javascript">    p.<span class="property">innerHTML</span> = data.<span class="property">mes</span>;</span></span><br><span class="line"><span class="language-javascript">  &#125;</span></span><br><span class="line"><span class="language-javascript">  input.<span class="property">onblur</span> = <span class="keyword">function</span> (<span class="params"></span>) &#123;</span></span><br><span class="line"><span class="language-javascript">    <span class="comment">// 获取用户的输入</span></span></span><br><span class="line"><span class="language-javascript">    <span class="keyword">let</span> username = <span class="variable language_">this</span>.<span class="property">value</span>;</span></span><br><span class="line"><span class="language-javascript">    <span class="comment">// 向服务器发送请求 检测用户是否存在</span></span></span><br><span class="line"><span class="language-javascript">    <span class="comment">// 1.创建script</span></span></span><br><span class="line"><span class="language-javascript">    <span class="keyword">const</span> script = <span class="variable language_">document</span>.<span class="title function_">createElement</span>(<span class="string">&#x27;script&#x27;</span>);</span></span><br><span class="line"><span class="language-javascript">    <span class="comment">// 2.设置标签 src</span></span></span><br><span class="line"><span class="language-javascript">    script.<span class="property">src</span> = <span class="string">&#x27;http://127.0.0.1:8000/jsonp-exe&#x27;</span>;</span></span><br><span class="line"><span class="language-javascript">    <span class="comment">// 3.插入到dom</span></span></span><br><span class="line"><span class="language-javascript">    <span class="variable language_">document</span>.<span class="property">body</span>.<span class="title function_">appendChild</span>(script);</span></span><br><span class="line"><span class="language-javascript">  &#125;</span></span><br><span class="line"><span class="language-javascript"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-
-
-<h3 id="4-5-jq-jsonp"><a href="#4-5-jq-jsonp" class="headerlink" title="4.5 jq-jsonp"></a>4.5 jq-jsonp</h3><h3 id="4-6-cors"><a href="#4-6-cors" class="headerlink" title="4.6 cors"></a>4.6 cors</h3><img src="视频截图/36cors.jpg">
-
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//server</span></span><br><span class="line">app.<span class="title function_">all</span>(<span class="string">&#x27;/cors&#x27;</span>, <span class="function">(<span class="params">req, res</span>) =&gt;</span> &#123;</span><br><span class="line">  <span class="comment">// 1.设置响应头，允许跨域</span></span><br><span class="line">  res.<span class="title function_">setHeader</span>(<span class="string">&#x27;Access-Control-Allow-Origin&#x27;</span>, <span class="string">&#x27;*&#x27;</span>);</span><br><span class="line">  <span class="comment">// 2.设置响应头</span></span><br><span class="line">  res.<span class="title function_">setHeader</span>(<span class="string">&#x27;Access-Control-Allow-Headers&#x27;</span>, <span class="string">&#x27;*&#x27;</span>);</span><br><span class="line">  res.<span class="title function_">setHeader</span>(<span class="string">&#x27;Access-Control-Allow-Methods&#x27;</span>, <span class="string">&#x27;*&#x27;</span>);</span><br><span class="line">  <span class="comment">// 3.响应体</span></span><br><span class="line">  res.<span class="title function_">send</span>(<span class="string">&#x27;hello cors&#x27;</span>);</span><br><span class="line"></span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="language-javascript"></span></span><br><span class="line"><span class="language-javascript">  <span class="keyword">const</span> btn = <span class="variable language_">document</span>.<span class="title function_">querySelector</span>(<span class="string">&#x27;button&#x27;</span>)</span></span><br><span class="line"><span class="language-javascript">  <span class="keyword">const</span> text = <span class="variable language_">document</span>.<span class="title function_">querySelector</span>(<span class="string">&#x27;textarea&#x27;</span>)</span></span><br><span class="line"><span class="language-javascript"></span></span><br><span class="line"><span class="language-javascript">  btn.<span class="property">onclick</span> = <span class="keyword">function</span> (<span class="params"></span>) &#123;</span></span><br><span class="line"><span class="language-javascript">    <span class="keyword">const</span> xhr = <span class="keyword">new</span> <span class="title class_">XMLHttpRequest</span>();</span></span><br><span class="line"><span class="language-javascript">    xhr.<span class="title function_">open</span>(<span class="string">&#x27;GET&#x27;</span>, <span class="string">&#x27;http://127.0.0.1:8000/cors&#x27;</span>);</span></span><br><span class="line"><span class="language-javascript">    xhr.<span class="title function_">send</span>();</span></span><br><span class="line"><span class="language-javascript">    xhr.<span class="property">onreadystatechange</span> = <span class="keyword">function</span> (<span class="params"></span>) &#123;</span></span><br><span class="line"><span class="language-javascript">      <span class="keyword">if</span> (xhr.<span class="property">readyState</span> === <span class="number">4</span>) &#123;</span></span><br><span class="line"><span class="language-javascript">        text.<span class="property">value</span> = xhr.<span class="property">response</span></span></span><br><span class="line"><span class="language-javascript">      &#125;</span></span><br><span class="line"><span class="language-javascript">    &#125;</span></span><br><span class="line"><span class="language-javascript">  &#125;</span></span><br><span class="line"><span class="language-javascript"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-
-      
+  <aside id="sidebar" class="mdui-drawer">
+    <div class="mdui-tab" mdui-tab>
+        <a href="#sidebar-tab1" id="sidebartab" class="mdui-ripple mdui-tab-active">Overview</a>
+        <a href="#sidebar-tab2" id="sidebartab" class="mdui-ripple">About</a>
     </div>
-    <footer class="article-footer">
-      <a data-url="https://shylees.github.io/uncategorized/ajax" data-id="cl1m5p1ob000098g2azj7e5y4" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ajax/" rel="tag">ajax</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/js/" rel="tag">js</a></li></ul>
 
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-
-
-</section>
-        
-          <aside id="sidebar">
-  
     
-
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Tags</h3>
-    <div class="widget">
-      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/ajax/" rel="tag">ajax</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/js/" rel="tag">js</a></li></ul>
+    <div id="sidebar-tab1" class="mdui-p-a-1">
+        <div class="mdui-list">
+            
+                
+                <a href="/" class="mdui-list-item mdui-ripple">
+                    <div class="mdui-list-item-icon">
+                        <i class="iconfont icon-home"></i>
+                    </div>
+                    <div class="mdui-list-item-content">Home</div>
+                </a>
+            
+                
+                <a href="/tags/" class="mdui-list-item mdui-ripple">
+                    <div class="mdui-list-item-icon">
+                        <i class="iconfont icon-bookmark"></i>
+                    </div>
+                    <div class="mdui-list-item-content">Tags</div>
+                </a>
+            
+                
+                <a href="/categories/" class="mdui-list-item mdui-ripple">
+                    <div class="mdui-list-item-icon">
+                        <i class="iconfont icon-folder"></i>
+                    </div>
+                    <div class="mdui-list-item-content">Categories</div>
+                </a>
+            
+                
+                <a href="/archives/" class="mdui-list-item mdui-ripple">
+                    <div class="mdui-list-item-icon">
+                        <i class="iconfont icon-archive"></i>
+                    </div>
+                    <div class="mdui-list-item-content">Archives</div>
+                </a>
+            
+                
+                <a href="/tools/" class="mdui-list-item mdui-ripple">
+                    <div class="mdui-list-item-icon">
+                        <i class="iconfont icon-tools"></i>
+                    </div>
+                    <div class="mdui-list-item-content">工具箱</div>
+                </a>
+            
+                
+                <a href="/about/" class="mdui-list-item mdui-ripple">
+                    <div class="mdui-list-item-icon">
+                        <i class="iconfont icon-user"></i>
+                    </div>
+                    <div class="mdui-list-item-content">About</div>
+                </a>
+            
+            <div class="mdui-list-item mdui-ripple">
+                <div class="mdui-list-item-icon">
+                    <i class="iconfont icon-moon"></i>
+                </div>
+                <div class="mdui-list-item-content">Night Mode</div>
+                <label class="mdui-switch" id="darkmode">
+                  <input type="checkbox" id="nightmode_switch"/>
+                  <i class="mdui-switch-icon"></i>
+                </label>
+            </div>           
+        </div>
     </div>
-  </div>
 
-
-  
     
-  <div class="widget-wrap">
-    <h3 class="widget-title">Tag Cloud</h3>
-    <div class="widget tagcloud">
-      <a href="/tags/ajax/" style="font-size: 10px;">ajax</a> <a href="/tags/js/" style="font-size: 10px;">js</a>
+    <div id="sidebar-tab2" class="mdui-p-a-1">
+        <div class="sidebar-overview">
+            <div class="sidebar-avatar">
+                
+                    <img src="/icons/avatar.gif"/>
+                
+            </div>
+            <div class="sidebar-author-name">shylees</div>
+            <div class="sidebar-description">前端学习笔记</div>
+        </div>
+        <div class="sidebar-links">
+            
+                
+                <div class="mdui-chip">
+                    <span class="mdui-chip-icon"><i class="iconfont icon-mail"></i></span>
+                    <a href="mailto:xxx@xxx.com" class="mdui-chip-title">E-Mail</a>
+                </div>
+            
+                
+                <div class="mdui-chip">
+                    <span class="mdui-chip-icon"><i class="iconfont icon-github"></i></span>
+                    <a target="_blank" rel="noopener" href="https://your.url" class="mdui-chip-title">GitHub</a>
+                </div>
+            
+                
+                <div class="mdui-chip">
+                    <span class="mdui-chip-icon"><i class="iconfont icon-steam"></i></span>
+                    <a target="_blank" rel="noopener" href="https://your.url" class="mdui-chip-title">Steam</a>
+                </div>
+            
+                
+                <div class="mdui-chip">
+                    <span class="mdui-chip-icon"><i class="iconfont icon-weibo"></i></span>
+                    <a target="_blank" rel="noopener" href="https://your.url" class="mdui-chip-title">Weibo</a>
+                </div>
+            
+        </div>
+        <ul class="mdui-list" mdui-collapse="{accordion: true}">
+            <li class="mdui-collapse-item">
+                <div class="mdui-collapse-item-header mdui-list-item mdui-ripple">
+                    <div class="mdui-list-item-icon">
+                        <i class="iconfont icon-link"></i>
+                    </div>
+                    <div class="mdui-list-item-content">Links</div>
+                    <div class="mdui-collapse-item-arrow">
+                        <i class="mdui-list-item-icon iconfont icon-angle-down"></i>
+                    </div>
+                </div>
+                <ul id="linksList" class="mdui-collapse-item-body mdui-list mdui-list-dense">
+                    
+                        <a target="_blank" rel="noopener" href="https://garybear.cn/hexo-theme-meadow/" class="mdui-list-item mdui-ripple">
+                            Meadow说明文档
+                        </a>
+                    
+                </ul>
+            </li>
+        </ul>
     </div>
-  </div>
 
-  
+    <div class="mdui-divider"></div>
     
-  <div class="widget-wrap">
-    <h3 class="widget-title">Archives</h3>
-    <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/04/">April 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/09/">September 2021</a></li></ul>
-    </div>
-  </div>
-
-
-  
     
-  <div class="widget-wrap">
-    <h3 class="widget-title">Recent Posts</h3>
-    <div class="widget">
-      <ul>
-        
-          <li>
-            <a href="/uncategorized/hello-world">Hello World</a>
-          </li>
-        
-          <li>
-            <a href="/uncategorized/ajax">ajax 尚硅谷</a>
-          </li>
-        
-      </ul>
-    </div>
-  </div>
-
-  
 </aside>
-        
-      </div>
-      <footer id="footer">
   
-  <div class="outer">
-    <div id="footer-info" class="inner">
-      &copy; 2022 shylees<br>
-      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
-    </div>
+  <main id="main-contain" class="mdui-container mdui-m-t-5">
+    
+    <article class="mdui-card mdui-m-b-5 mdui-hoverable">    
+      
+      
+        <div class="post-header"> 
+  <a class="post-header-title" href="/uncategorized/hello-world">Hello World</a>
+  <div class="post-header-meta">
+    <span>
+      <span class="iconfont icon-calendar"></span>
+      Posted on:&nbsp;2022-04-04
+    </span>
+    <span>
+      <span class="iconfont icon-calendar-check"></span>
+      Edited on:&nbsp;1985-10-26
+    </span>
+    <span>
+      <span class="iconfont icon-folder"></span>
+      In:&nbsp;
+    </span>
+    
   </div>
-</footer>
-    </div>
-    <nav id="mobile-nav">
-  
-    <a href="/" class="mobile-nav-link">Home</a>
-  
-    <a href="/archives" class="mobile-nav-link">Archives</a>
-  
-</nav>
+</div>   
     
 
-<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
 
 
-  
-<link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+      
+      
+  <div class="tag-line-space"></div>
 
-  
-<script src="/fancybox/jquery.fancybox.pack.js"></script>
+      
+      <div id="achieve-abstract" class="mdui-card-content mdui-p-x-4">
+        <div class="post-abstract mdui-typo ">
+          
+            <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or yo...
+          
+        </div>
+        
+        <div style="text-align:center;">
+          <a class="post-readmore mdui-btn mdui-ripple mdui-btn-raised" href="/uncategorized/hello-world">Read More</a>
+        </div>
+      </div>
+    </article>
 
-
-
-
-<script src="/js/script.js"></script>
-
-
-
-
+    <article class="mdui-card mdui-m-b-5 mdui-hoverable">    
+      
+      
+        <div class="post-header"> 
+  <a class="post-header-title" href="/uncategorized/ajax">ajax 尚硅谷</a>
+  <div class="post-header-meta">
+    <span>
+      <span class="iconfont icon-calendar"></span>
+      Posted on:&nbsp;2021-09-09
+    </span>
+    <span>
+      <span class="iconfont icon-calendar-check"></span>
+      Edited on:&nbsp;2021-09-10
+    </span>
+    <span>
+      <span class="iconfont icon-folder"></span>
+      In:&nbsp;
+    </span>
+    
   </div>
+</div>   
+    
+
+
+
+      
+      
+  <div class="post-tags">
+    
+      <i class="iconfont icon-tag">
+        <a rel="tag" href = /tags/ajax/ >ajax</a>
+      </i>
+    
+      <i class="iconfont icon-tag">
+        <a rel="tag" href = /tags/js/ >js</a>
+      </i>
+    
+  </div>
+
+      
+      <div id="achieve-abstract" class="mdui-card-content mdui-p-x-4">
+        <div class="post-abstract mdui-typo ">
+          
+            <h1 id="ajax-尚硅谷-from-21-9-9-9-10"><a href="#ajax-尚硅谷-from-21-9-9-9-10" class="headerlink" title="ajax 尚硅谷(from 21.9.9 -9.10)"></a>ajax 尚硅谷(from 21.9.9 -9.10)</h1><h2 id="1-简介"><a href="#1-简介" class="headerlink" title="1.简介"></a>1.简介</h2><h3 id="1-1-ajax"><a href="#1-1-ajax" class="headerlink" ti...
+          
+        </div>
+        
+        <div style="text-align:center;">
+          <a class="post-readmore mdui-btn mdui-ripple mdui-btn-raised" href="/uncategorized/ajax">Read More</a>
+        </div>
+      </div>
+    </article>
+
+
+
+  </main>
+  <footer id="footer" class="mdui-text-center mdui-m-t-5 mdui-p-b-2 mdui-p-t-4 mdui-color-theme">
+  <div class="mdui-container">
+    <div class="mdui-row">
+      
+        <a href="https://beian.miit.gov.cn" rel="noopener" target="_blank"></a>
+      
+      <span>
+        &copy; 2015 - 2022 
+        
+          <span style="color:#d9333f" class="iconfont icon-heart"></span>
+        
+        shylees
+      </span>
+    </div>
+    <div class="mdui-row">
+      
+        <div class="mdui-col-xs-6 mdui-text-right">
+          <span>Powered by <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a></span>
+        </div>
+        <div class="mdui-col-xs-6 mdui-text-left">
+          <span>Theme: <a href="https://github.com/kb1000fx/Meadow" rel="noopener" target="_blank">Meadow</a></span>
+        </div>
+      
+    </div>
+    <div class="mdui-row">
+      
+        <div class="mdui-col-xs-6 mdui-text-right">
+          <span id="busuanzi_container_site_uv" style="display: none;"> <span class="iconfont icon-user"></span>Total Visitors <span id="busuanzi_value_site_uv"></span></span>
+        </div>
+        <div class="mdui-col-xs-6 mdui-text-left">
+          <span id="busuanzi_container_site_pv" style="display: none;"> <span class="iconfont icon-eye"></span>Total Views <span id="busuanzi_value_site_pv"></span></span>
+        </div>
+      
+    </div>
+ </div>
+</footer>
+  
+  <button id="gotop" class="mdui-fab mdui-fab-fixed mdui-fab-hide mdui-ripple mdui-color-teal" style="z-index:100;"><i class="iconfont icon-arrowup"></i></button>
+  
+  
+
+    <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+
+
+
+
+    
+<script src="/js/mdui.min.v1.0.0.js"></script>
+
+
+
+
+<script src="/js/meadow.js"></script>
+
 </body>
-</html>
+</html >
