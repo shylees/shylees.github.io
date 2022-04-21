@@ -1,0 +1,5 @@
+---
+title: {{ title }}
+data: 
+tags:
+---
