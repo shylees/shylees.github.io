@@ -97,6 +97,19 @@ ignore:
 
 # Extensions
 ## Plugins: https://hexo.io/plugins/
+# plugin:
+# - hexo-generator-feed
+# #Feed Atom
+# feed:
+#   type: atom
+#   path: ./public/atom.xml
+#   limit: 20
+
+# Search
+# search:
+#   path: search.json 
+#   field: post
+
 ## Themes: https://hexo.io/themes/
 theme: inside
 

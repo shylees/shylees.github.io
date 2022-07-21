@@ -110,10 +110,10 @@ profile:
 # Sidebar navigation links
 menu:
   🏠 Home: /
-  🔍 search: /search
+  # 🔍 search: /search
   # Github: https://github.com/shylees
-  🔗 Links: /links
-  🧑‍💻 About: /about
+  # 🔗 Links: /links
+  # 🧑‍💻 About: /about
 
 
 # Social media URL
@@ -199,52 +199,53 @@ category:
 
 
 # Search
-search:
-  # Display a quick search button in fab
-  fab: true
+# search:
+#   # Display a quick search button in fab
+#   fab: true
 
-  # Render a standalone searh page which can be configured in sidebar menu such as `Search: /search`
-  page: true
+#   # Render a standalone searh page which can be configured in sidebar menu such as `Search: /search`
+#   page: true
 
-  # Local search
-  # adapter:
-  #   range:
-  #     - post
-  #     - page
-  #   per_page: 20
-  #   limit: 10000
+#   # Local search
+#   # adapter:
+#   #   range:
+#   #     - post
+#   #     - page
+#   #   per_page: 20
+#   #   limit: 10000
 
-  # Custom search
-  adapter:
-  #   # Used for pagination
-    per_page: 10
-  #   # Optional
-    logo: //cdn.worldvectorlogo.com/logos/algolia.svg
-    request:
-      url: https://{APPLICATION_ID}-dsn.algolia.net/1/indexes/{INDEX}/query
-      method: post
-      #     # Available variables: :query, :per_page, :current
-      # body: '{"query":":query","hitsPerPage":":per_page","page":":current","attributesToSnippet":["content:100"]}'
-      body: '{"query":":query","hitsPerPage":":per_page","page":":current","attributesToSnippet":["title:100","content:100"],"attributesToHighlight":[],"attributesToRetrieve":["*","-content"]}'
-      headers:
-        X-Algolia-API-Key: {API_KEY}
-        X-Algolia-Application-Id: {APPLICATION_ID}
-        Content-Type: application/json; charset=UTF-8
-    keys:
-      # Used to retrieve result list
-      data: hits
-      # Used to retrieve current page number
-      current: page
-      # Used to retrieve total page number
-      total: nbPage
-      # Used to retrieve total hits number
-      hits: nbHits
-      # Used to retrieve cost time
-      time: processingTimeMS
-      # Used to retrieve title from per hit
-      title: _snippetResult.title.value
-      # Used to retrieve content from per hit
-      content: _snippetResult.content.value
+#   # Custom search
+#   adapter:
+#   #   # Used for pagination
+#     per_page: 10
+#   #   # Optional
+#     logo: //cdn.worldvectorlogo.com/logos/algolia.svg
+#     request:
+#       url: https://{APPLICATION_ID}-dsn.algolia.net/1/indexes/{INDEX}/query
+      
+      
+#       #     # Available variables: :query, :per_page, :current
+#       # body: '{"query":":query","hitsPerPage":":per_page","page":":current","attributesToSnippet":["content:100"]}'
+#       body: '{"query":":query","hitsPerPage":":per_page","page":":current","attributesToSnippet":["title:100","content:100"],"attributesToHighlight":[],"attributesToRetrieve":["*","-content"]}'
+#       headers:
+#         X-Algolia-API-Key: {API_KEY}
+#         X-Algolia-Application-Id: {APPLICATION_ID}
+#         Content-Type: application/json; charset=UTF-8
+#     keys:
+#       # Used to retrieve result list
+#       data: hits
+#       # Used to retrieve current page number
+#       current: page
+#       # Used to retrieve total page number
+#       total: nbPage
+#       # Used to retrieve total hits number
+#       hits: nbHits
+#       # Used to retrieve cost time
+#       time: processingTimeMS
+#       # Used to retrieve title from per hit
+#       title: _snippetResult.title.value
+#       # Used to retrieve content from per hit
+#       content: _snippetResult.content.value
 
 
 # ---------------------------------------------------------------
@@ -432,14 +433,16 @@ plugins:
 
   - https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js # 全局引入卜蒜子统计
   
-  - bin/clipboard/clipboard.min.js # 全局引入剪贴板JS文件
-  - position: [post, page] # 剪贴板
-    template: |
-      <script>
-        var elements = document.querySelectorAll(".highlight tr>.code");
-        for (var i = 0; i < elements.length; i++) { elements[i].innerHTML = '<button class="btn-copy" data-clipboard-snippet=""><svg t="1644686763820" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2062" data-darkreader-inline-fill="" width="16" height="16"><path d="M798.4 128h-72v-12.8c0-38.4-33.6-72-72-72h-97.6C555.2 17.6 537.6 0 512 0c-25.6 0-43.2 17.6-43.2 43.2h-97.6c-38.4 0-72 33.6-72 72V128h-72c-30.4 0-56 25.6-56 56v780.8c0 33.6 25.6 59.2 59.2 59.2h568c17.6 0 33.6-8 43.2-20.8 8-12.8 12.8-25.6 12.8-38.4V184C852.8 153.6 827.2 128 798.4 128zM384 128h256v84.8H384V128z m384 811.2H256V212.8h43.2v12.8c0 38.4 33.6 72 72 72h281.6c38.4 0 72-33.6 72-72v-12.8H768v726.4z" p-id="2063"></path></svg></button>' + elements[i].innerHTML };
-        new ClipboardJS('.btn-copy', { target: (trigger) => trigger.nextElementSibling });
-      </script>
-      <style>
-        .btn-copy{position:absolute;right:5px;top:5px;border:none;padding:3px 6px;border-radius:3px;background:var(--inside-background);fill:currentColor;opacity:0;transition:.3s}.highlight:hover .btn-copy{opacity:1}
-      </style>
+  # - ./js/clipborad # 全局引入剪贴板JS文件
+  # - position: [post, page] # 剪贴板
+  #   template: |
+  #     <script>
+  #       var elements = document.querySelectorAll(".highlight tr>.code");
+  #       for (var i = 0; i < elements.length; i++) { elements[i].innerHTML = '<button class="btn-copy" data-clipboard-snippet=""><svg t="1644686763820" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2062" data-darkreader-inline-fill="" width="16" height="16"><path d="M798.4 128h-72v-12.8c0-38.4-33.6-72-72-72h-97.6C555.2 17.6 537.6 0 512 0c-25.6 0-43.2 17.6-43.2 43.2h-97.6c-38.4 0-72 33.6-72 72V128h-72c-30.4 0-56 25.6-56 56v780.8c0 33.6 25.6 59.2 59.2 59.2h568c17.6 0 33.6-8 43.2-20.8 8-12.8 12.8-25.6 12.8-38.4V184C852.8 153.6 827.2 128 798.4 128zM384 128h256v84.8H384V128z m384 811.2H256V212.8h43.2v12.8c0 38.4 33.6 72 72 72h281.6c38.4 0 72-33.6 72-72v-12.8H768v726.4z" p-id="2063"></path></svg></button>' + elements[i].innerHTML };
+  #       new ClipboardJS('.btn-copy', { target: (trigger) => trigger.nextElementSibling });
+  #     </script>
+  #     <style>
+  #       .btn-copy{position:absolute;right:5px;top:5px;border:none;padding:3px 6px;border-radius:3px;background:var(--inside-background);fill:currentColor;opacity:0;transition:.3s}.highlight:hover .btn-copy{opacity:1}
+  #     </style>
+
+# rss: /atom.xml
