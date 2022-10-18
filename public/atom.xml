@@ -93,7 +93,7 @@
     <category term="furtherNotes" scheme="https://shylees.github.io/categories/furtherNotes/"/>
     
     
-    <category term="js" scheme="https://shylees.github.io/tags/js/"/>
+    <category term="JavaScript" scheme="https://shylees.github.io/tags/JavaScript/"/>
     
   </entry>
   
@@ -119,7 +119,7 @@
     <category term="furtherNotes" scheme="https://shylees.github.io/categories/furtherNotes/"/>
     
     
-    <category term="js" scheme="https://shylees.github.io/tags/js/"/>
+    <category term="JavaScript" scheme="https://shylees.github.io/tags/JavaScript/"/>
     
   </entry>
   
@@ -353,9 +353,9 @@
     <category term="workNotes" scheme="https://shylees.github.io/categories/workNotes/"/>
     
     
-    <category term="js" scheme="https://shylees.github.io/tags/js/"/>
-    
     <category term="闭包" scheme="https://shylees.github.io/tags/%E9%97%AD%E5%8C%85/"/>
+    
+    <category term="JavaScript" scheme="https://shylees.github.io/tags/JavaScript/"/>
     
   </entry>
   
