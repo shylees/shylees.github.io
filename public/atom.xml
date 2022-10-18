@@ -37,9 +37,9 @@
     <category term="furtherNotes" scheme="https://shylees.github.io/categories/furtherNotes/"/>
     
     
-    <category term="网络" scheme="https://shylees.github.io/tags/%E7%BD%91%E7%BB%9C/"/>
-    
     <category term="HTTP" scheme="https://shylees.github.io/tags/HTTP/"/>
+    
+    <category term="计网" scheme="https://shylees.github.io/tags/%E8%AE%A1%E7%BD%91/"/>
     
   </entry>
   
@@ -65,9 +65,9 @@
     <category term="furtherNotes" scheme="https://shylees.github.io/categories/furtherNotes/"/>
     
     
-    <category term="网络" scheme="https://shylees.github.io/tags/%E7%BD%91%E7%BB%9C/"/>
-    
     <category term="HTTP" scheme="https://shylees.github.io/tags/HTTP/"/>
+    
+    <category term="计网" scheme="https://shylees.github.io/tags/%E8%AE%A1%E7%BD%91/"/>
     
   </entry>
   
@@ -93,7 +93,9 @@
     <category term="furtherNotes" scheme="https://shylees.github.io/categories/furtherNotes/"/>
     
     
-    <category term="JavaScript" scheme="https://shylees.github.io/tags/JavaScript/"/>
+    <category term="JS" scheme="https://shylees.github.io/tags/JS/"/>
+    
+    <category term="原型" scheme="https://shylees.github.io/tags/%E5%8E%9F%E5%9E%8B/"/>
     
   </entry>
   
@@ -119,7 +121,9 @@
     <category term="furtherNotes" scheme="https://shylees.github.io/categories/furtherNotes/"/>
     
     
-    <category term="JavaScript" scheme="https://shylees.github.io/tags/JavaScript/"/>
+    <category term="JS" scheme="https://shylees.github.io/tags/JS/"/>
+    
+    <category term="原型" scheme="https://shylees.github.io/tags/%E5%8E%9F%E5%9E%8B/"/>
     
   </entry>
   
@@ -128,7 +132,7 @@
     <link href="https://shylees.github.io/workNotes/work/12%20%E9%A1%B5%E9%9D%A2%E8%B7%B3%E8%BD%AC%E7%BC%93%E5%AD%98%E5%92%8C%E5%9B%BE%E7%89%87%E6%87%92%E9%A2%84%E5%8A%A0%E8%BD%BD"/>
     <id>https://shylees.github.io/workNotes/work/12%20%E9%A1%B5%E9%9D%A2%E8%B7%B3%E8%BD%AC%E7%BC%93%E5%AD%98%E5%92%8C%E5%9B%BE%E7%89%87%E6%87%92%E9%A2%84%E5%8A%A0%E8%BD%BD</id>
     <published>2022-06-07T13:30:47.483Z</published>
-    <updated>2022-07-03T13:16:33.210Z</updated>
+    <updated>2022-10-18T08:43:47.451Z</updated>
     
     <content type="html"><![CDATA[<ol><li><p>在页面跳转的情况下，还是会有资源重新加载的情况，所以使用了 keep-alive</p><ol><li><p>在 router.js 增加允许使用 keep-alive</p><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> * <span class="keyword">as</span> <span class="title class_">VueRouter</span> <span class="keyword">from</span> <span class="string">&quot;vue-router&quot;</span>;</span><br><span class="line"><span class="keyword">import</span> <span class="title class_">Home</span> <span class="keyword">from</span> <span class="string">&quot;./components/Home.vue&quot;</span>;</span><br><span class="line"><span class="keyword">import</span> <span class="title class_">List</span> <span class="keyword">from</span> <span class="string">&quot;./components/List.vue&quot;</span>;</span><br><span class="line"><span class="keyword">const</span> router = <span class="title class_">VueRouter</span>.<span class="title function_">createRouter</span>(&#123;</span><br><span class="line">  <span class="attr">history</span>: <span class="title class_">VueRouter</span>.<span class="title function_">createWebHashHistory</span>(),</span><br><span class="line">  <span class="attr">routes</span>: [</span><br><span class="line">    &#123;</span><br><span class="line">      <span class="attr">path</span>: <span class="string">&quot;/&quot;</span>,</span><br><span class="line">      <span class="attr">component</span>: <span class="title class_">Home</span>,</span><br><span class="line">      <span class="attr">meta</span>: &#123;</span><br><span class="line">        <span class="attr">name</span>: <span class="string">&quot;home&quot;</span>,</span><br><span class="line">        <span class="attr">requiresAuth</span>: <span class="literal">true</span>, <span class="comment">//</span></span><br><span class="line">        <span class="attr">keepAlive</span>: <span class="literal">true</span>, <span class="comment">// 允许使用缓存</span></span><br><span class="line">      &#125;,</span><br><span class="line">    &#125;,</span><br><span class="line">    &#123;</span><br><span class="line">      <span class="attr">path</span>: <span class="string">&quot;/list/:category&quot;</span>,</span><br><span class="line">      <span class="attr">component</span>: <span class="title class_">List</span>,</span><br><span class="line">      <span class="attr">meta</span>: &#123;</span><br><span class="line">        <span class="attr">name</span>: <span class="string">&quot;list&quot;</span>,</span><br><span class="line">        <span class="attr">requiresAuth</span>: <span class="literal">true</span>,</span><br><span class="line">        <span class="attr">keepAlive</span>: <span class="literal">true</span>,</span><br><span class="line">      &#125;,</span><br><span class="line">    &#125;,</span><br><span class="line">  ],</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> router;</span><br></pre></td></tr></table></figure></li><li><p>在 app.js 使用 keep-alive</p><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">template</span>&gt;</span></span><br><span class="line">  <span class="comment">&lt;!-- vue3 写法 --&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">router-view</span> <span class="attr">v-slot</span>=<span class="string">&quot;&#123; Component &#125;&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">keep-alive</span> <span class="attr">v-if</span>=<span class="string">&quot;$route.meta.keepAlive&quot;</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">component</span> <span class="attr">:is</span>=<span class="string">&quot;Component&quot;</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">keep-alive</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">component</span> <span class="attr">v-if</span>=<span class="string">&quot;!$route.meta.keepAlive&quot;</span> <span class="attr">:is</span>=<span class="string">&quot;Component&quot;</span> /&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">router-view</span>&gt;</span></span><br><span class="line">  <span class="comment">&lt;!-- vue2 写法 --&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">keep-alive</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">router-view</span> <span class="attr">v-if</span>=<span class="string">&quot;$route.meta.keepAlive&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">router-view</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">keep-alive</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">router-view</span> <span class="attr">v-if</span>=<span class="string">&quot;!$route.meta.keepAlive&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">router-view</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">template</span>&gt;</span></span><br></pre></td></tr></table></figure></li></ol></li></ol><blockquote><p><font color="red">如果第一个方法没有效果的话，那么要结合第二个看</font></p></blockquote><ol start="2"><li><p>路由回退中 router.go() 与 router.back()</p><blockquote><p><a href="https://blog.csdn.net/qq_42618566/article/details/91045282">https://blog.csdn.net/qq_42618566/article/details/91045282</a></p></blockquote><ul><li><code>go()</code> 原页面表单中的内容会丢失</li><li><code>back()</code> 原页面表单中的内容会保留<ul><li><code>back()</code> 后退</li><li><code>back(0)</code> 刷新</li><li><code>back(1)</code> 前进</li></ul></li></ul></li><li><p>使用 keep-alive，第二次跳转页面后 不会 触发到原先在 onMounted 的 使页面到顶部，就会保持上个页面滚动条的滚动情况</p><ul><li>在 onActived 写一个与 onMounted 一样的逻辑</li><li>页面第一次进入的时候，钩子触发的顺序是 created-&gt;mounted-&gt;activated，所以别在 mounted 和 activated 方法中写相同的逻辑代码</li></ul><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="title function_">onActivated</span>(<span class="function">() =&gt;</span> &#123;</span><br><span class="line">  <span class="keyword">if</span> (<span class="variable language_">document</span>.<span class="property">documentElement</span>.<span class="property">scrollTop</span>) &#123;</span><br><span class="line">    <span class="variable language_">document</span>.<span class="property">documentElement</span>.<span class="property">scrollTop</span> = <span class="number">0</span>;</span><br><span class="line">  &#125; <span class="keyword">else</span> <span class="keyword">if</span> (<span class="variable language_">window</span>.<span class="property">pageYOffset</span>) &#123;</span><br><span class="line">    <span class="variable language_">window</span>.<span class="property">pageYOffset</span> = <span class="number">0</span>;</span><br><span class="line">  &#125; <span class="keyword">else</span> <span class="keyword">if</span> (<span class="variable language_">document</span>.<span class="property">body</span>.<span class="property">scrollTop</span>) &#123;</span><br><span class="line">    <span class="variable language_">document</span>.<span class="property">body</span>.<span class="property">scrollTop</span> = <span class="number">0</span>;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure></li><li><p>图片懒加载</p><ul><li><p>原理：将图片的 url 放在 <code>&lt;img src=&quot;&quot; :data-src=&quot;url&quot; /&gt;</code> 的 data-src 里，当图片位于用户可视区时就将 url 放到 src 属性里</p></li><li><p>判断图片是否位于可视区的方法:</p><ol><li>scroll 事件监听，用 scrollTop 等属性计算位置判断</li><li>使用 Intersection Observer</li><li>Intersection Observer<blockquote><p><a href="https://juejin.cn/post/7080544007834730510">https://juejin.cn/post/7080544007834730510</a> 这篇文章挺全面的</p></blockquote></li></ol></li><li><p>解决方法</p><blockquote><p>因为 项目是 vue3 + vant，所以使用 vant 自带的 <code>&lt;van-image lazy-load&gt;&lt;/van-image&gt;</code></p></blockquote></li></ul></li><li><p>图片懒加载的前提下，在右滑 or 轮播图切换，及非垂直滚动时做图片预加载，增加用户体验</p><ul><li><p>原理均类似于懒加载的原理，因为图片地址在 src 属性里时，页面就会自动加载图片资源了</p></li><li><p><strong>轮播</strong>原理：在当前图片轮播时，就将下一张图片给加载出来，这部分是取消了懒加载啦</p></li><li><p>实现:</p></li></ul><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">img</span> <span class="attr">class</span>=<span class="string">&quot;w-100vw h-full relative&quot;</span> <span class="attr">:src</span>=<span class="string">&quot;realPic[index]&quot;</span> /&gt;</span></span><br></pre></td></tr></table></figure><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 轮播图 图片懒加载</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> * imgs: 配置文件中的 banner 图片的链接</span></span><br><span class="line"><span class="comment"> * realPic: 真正页面使用的图片的链接</span></span><br><span class="line"><span class="comment"> * changePic: 轮播图 图片切换的时候触发函数，预先加载后一个图片</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">let</span> imgs = [];</span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">let</span> item <span class="keyword">of</span> board_1) &#123;</span><br><span class="line">  imgs.<span class="title function_">push</span>(item.<span class="property">banner</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">let</span> realPic = <span class="title function_">reactive</span>([imgs[<span class="number">0</span>], imgs[<span class="number">1</span>]]);</span><br><span class="line"><span class="keyword">let</span> count = <span class="title function_">ref</span>(<span class="number">2</span>);</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> changePic = <span class="title function_">limit</span>(<span class="function">() =&gt;</span> &#123;</span><br><span class="line">  <span class="keyword">let</span> img = <span class="keyword">new</span> <span class="title class_">Image</span>();</span><br><span class="line">  img.<span class="property">src</span> = imgs[count.<span class="property">value</span>];</span><br><span class="line">  <span class="keyword">if</span> (img.<span class="property">complete</span>) &#123;</span><br><span class="line">    <span class="keyword">return</span>;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">if</span> (count.<span class="property">value</span> &lt; imgs.<span class="property">length</span>) &#123;</span><br><span class="line">    realPic.<span class="title function_">push</span>(imgs[count.<span class="property">value</span>]);</span><br><span class="line">    count.<span class="property">value</span>++;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="comment">// console.log(realPic);</span></span><br><span class="line">&#125;, imgs.<span class="property">length</span> - count.<span class="property">value</span>);</span><br></pre></td></tr></table></figure><ul><li><p><strong>右滑</strong>原理：所以在需要预加载的图片的 src 为 一个图片数组，初始情况下，数组为空，在懒加载的图片加载完成后就把该数组用 图片 src 填满</p></li><li><p>实现</p><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">template</span> <span class="attr">v-if</span>=<span class="string">&quot;index &lt; 4&quot;</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">van-image</span></span></span><br><span class="line"><span class="tag">    <span class="attr">:src</span>=<span class="string">&quot;item.banner&quot;</span></span></span><br><span class="line"><span class="tag">    <span class="attr">class</span>=<span class="string">&quot;w-full h-full&quot;</span></span></span><br><span class="line"><span class="tag">    <span class="attr">lazy-load</span></span></span><br><span class="line"><span class="tag">    @<span class="attr">load</span>=<span class="string">&quot;load(index)&quot;</span></span></span><br><span class="line"><span class="tag">  &gt;</span><span class="tag">&lt;/<span class="name">van-image</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">template</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">template</span> <span class="attr">v-else</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">van-image</span> <span class="attr">:src</span>=<span class="string">&quot;preimg[index]&quot;</span> <span class="attr">class</span>=<span class="string">&quot;w-full h-full&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">van-image</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">template</span>&gt;</span></span><br></pre></td></tr></table></figure><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> preimg = <span class="title function_">reactive</span>([]);</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> load = <span class="title function_">limit</span>(<span class="function">() =&gt;</span> &#123;</span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">0</span>; i &lt; board_2.<span class="property">list</span>.<span class="property">length</span>; i++) &#123;</span><br><span class="line">    preimg.<span class="title function_">push</span>(board_2.<span class="property">list</span>[i].<span class="property">banner</span>);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;, <span class="number">1</span>);</span><br></pre></td></tr></table></figure></li></ul></li><li><p>计算首屏时间</p><blockquote><p><a href="https://blog.csdn.net/weixin_40599109/article/details/108622434">https://blog.csdn.net/weixin_40599109/article/details/108622434</a></p></blockquote><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> t = performance.<span class="property">timing</span>;</span><br><span class="line"><span class="keyword">var</span> pageLoadTime = t.<span class="property">loadEventEnd</span> - t.<span class="property">navigationStart</span>;</span><br><span class="line"><span class="comment">// 在这里pageLoadTime就是首屏时间</span></span><br></pre></td></tr></table></figure></li><li><p>在进入同一个有 keepalive 的组件，但是要展示不同数据时，就要合理修改 reactive 的值</p></li></ol>]]></content>
     
@@ -149,9 +153,9 @@
     <category term="workNotes" scheme="https://shylees.github.io/categories/workNotes/"/>
     
     
-    <category term="vite" scheme="https://shylees.github.io/tags/vite/"/>
-    
     <category term="vue3" scheme="https://shylees.github.io/tags/vue3/"/>
+    
+    <category term="性能优化" scheme="https://shylees.github.io/tags/%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96/"/>
     
   </entry>
   
@@ -218,7 +222,7 @@
     <link href="https://shylees.github.io/workNotes/work/10%20nuxtjs%E6%8A%A5%E9%94%99"/>
     <id>https://shylees.github.io/workNotes/work/10%20nuxtjs%E6%8A%A5%E9%94%99</id>
     <published>2022-04-20T13:51:19.513Z</published>
-    <updated>2022-04-21T05:26:20.978Z</updated>
+    <updated>2022-10-18T08:43:02.925Z</updated>
     
     <content type="html"><![CDATA[<blockquote><p>博客上线前，老大发现的 [vue warn], 说 “博客详情服务器渲染有问题”、“这个在正式环境会执行错误的”、“沙盒应该就会无法渲染”、“ssr 和 spa 渲染结果不一样”…</p><p>触发报错的操作: “在博客详情页直接刷新 就会提示我截图的错误”</p></blockquote><h3 id="报错信息:">报错信息:<a title="#报错信息:" href="#报错信息:"></a></h3><p>[Vue warn]: The client-side rendered virtual DOM tree is not matching server-rendered content. This is likely caused by incorrect HTML markup, for example nesting block-level elements inside <code>&lt;p&gt;</code>, or missing <code>&lt;tbody&gt;</code>. Bailing hydration and performing full client-side render.</p><h3 id="报错截图：">报错截图：<a title="#报错截图：" href="#报错截图："></a></h3><img src="https://s1.ax1x.com/2022/04/20/Ls48OK.png"><blockquote><p>大概意思是 HTML 结构嵌套不正确，会导致 srr 渲染的页面跟csr的不一样<br>根据黄色提示，我很快就定位到了代码的位置</p></blockquote><h3 id="报错效果图及其-html-标签:">报错效果图及其 html 标签:<a title="#报错效果图及其-html-标签:" href="#报错效果图及其-html-标签:"></a></h3><img src="https://s1.ax1x.com/2022/04/20/LsI3VO.jpg"><p>最外层的<code>&lt;a class=&quot;pre item&quot;&gt;</code></p><blockquote><p>本来最外层的 <code>&lt;a&gt;</code> 是 <code>&lt;p&gt;</code> 的，但是因为里面的两个 <code>&lt;a&gt;</code> 标签都是跳转同一个链接，所以我就直接把最外层改了，虽然我记得这样嵌套不行，但是我以为没影响！</p></blockquote><blockquote><p>我不知道为什么上个同学要分开写两个? 难道是因为分开 <code>hover</code> 改变样式? 如果有大佬知道分开写的好处, d 我!!! 我很感兴趣!!!</p></blockquote><h3 id="报错解决">报错解决<a title="#报错解决" href="#报错解决"></a></h3><p>因为 html 标签嵌套规则里面有提到 <code>&lt;a&gt;</code> 标签可以嵌套<strong>除本身以外</strong>的块级元素、行内元素，所以直接把里面的两个 <code>&lt;a&gt;</code> 改成其他标签，如 <code>&lt;span&gt;</code> 就解决问题啦！</p>]]></content>
     
@@ -237,7 +241,9 @@
     
     <category term="ssr" scheme="https://shylees.github.io/tags/ssr/"/>
     
-    <category term="nuxtjs" scheme="https://shylees.github.io/tags/nuxtjs/"/>
+    <category term="Nuxtjs" scheme="https://shylees.github.io/tags/Nuxtjs/"/>
+    
+    <category term="报错" scheme="https://shylees.github.io/tags/%E6%8A%A5%E9%94%99/"/>
     
   </entry>
   
@@ -264,11 +270,11 @@
     <category term="furtherNotes" scheme="https://shylees.github.io/categories/furtherNotes/"/>
     
     
-    <category term="网络" scheme="https://shylees.github.io/tags/%E7%BD%91%E7%BB%9C/"/>
-    
     <category term="HTTP" scheme="https://shylees.github.io/tags/HTTP/"/>
     
     <category term="TCP" scheme="https://shylees.github.io/tags/TCP/"/>
+    
+    <category term="计网" scheme="https://shylees.github.io/tags/%E8%AE%A1%E7%BD%91/"/>
     
   </entry>
   
@@ -295,11 +301,11 @@
     <category term="furtherNotes" scheme="https://shylees.github.io/categories/furtherNotes/"/>
     
     
-    <category term="网络" scheme="https://shylees.github.io/tags/%E7%BD%91%E7%BB%9C/"/>
-    
     <category term="HTTP" scheme="https://shylees.github.io/tags/HTTP/"/>
     
     <category term="TCP" scheme="https://shylees.github.io/tags/TCP/"/>
+    
+    <category term="计网" scheme="https://shylees.github.io/tags/%E8%AE%A1%E7%BD%91/"/>
     
   </entry>
   
@@ -325,9 +331,9 @@
     <category term="furtherNotes" scheme="https://shylees.github.io/categories/furtherNotes/"/>
     
     
-    <category term="网络" scheme="https://shylees.github.io/tags/%E7%BD%91%E7%BB%9C/"/>
-    
     <category term="TCP" scheme="https://shylees.github.io/tags/TCP/"/>
+    
+    <category term="计网" scheme="https://shylees.github.io/tags/%E8%AE%A1%E7%BD%91/"/>
     
   </entry>
   
@@ -355,7 +361,7 @@
     
     <category term="闭包" scheme="https://shylees.github.io/tags/%E9%97%AD%E5%8C%85/"/>
     
-    <category term="JavaScript" scheme="https://shylees.github.io/tags/JavaScript/"/>
+    <category term="JS" scheme="https://shylees.github.io/tags/JS/"/>
     
   </entry>
   
@@ -382,6 +388,8 @@
     
     
     <category term="vue" scheme="https://shylees.github.io/tags/vue/"/>
+    
+    <category term="报错" scheme="https://shylees.github.io/tags/%E6%8A%A5%E9%94%99/"/>
     
   </entry>
   
@@ -465,6 +473,8 @@
     
     <category term="ssr" scheme="https://shylees.github.io/tags/ssr/"/>
     
+    <category term="Nuxtjs" scheme="https://shylees.github.io/tags/Nuxtjs/"/>
+    
   </entry>
   
   <entry>
@@ -491,6 +501,8 @@
     
     
     <category term="vue" scheme="https://shylees.github.io/tags/vue/"/>
+    
+    <category term="ssr" scheme="https://shylees.github.io/tags/ssr/"/>
     
   </entry>
   
